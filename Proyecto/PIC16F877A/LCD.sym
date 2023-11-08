@@ -1,5 +1,5 @@
-004-005 @READ_PROGRAM_MEMORY8.P1
-004-005 @WRITE_PROGRAM_MEMORY8.P2
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
 008     PSP_DATA
 015     CCP_1_LOW
 015     CCP_1
@@ -10,12 +10,12 @@
 020-021 @sprintf_string
 022     lcd_init.i
 022     MAIN.@SCRATCH1
-022     @PSTRINGC7_660.@SCRATCH1
+022     @PSTRINGC7_723.@SCRATCH1
 023     lcd_init.@SCRATCH1
-023     @PSTRINGC7_660.@SCRATCH2
-024     @PSTRINGC7_660.@SCRATCH3
+023     @PSTRINGC7_723.@SCRATCH2
+024     @PSTRINGC7_723.@SCRATCH3
 025     lcd_putc.c
-025     @PSTRINGC7_660.@SCRATCH4
+025     @PSTRINGC7_723.@SCRATCH4
 026     @delay_ms1.P1
 026     lcd_gotoxy.x
 027     lcd_gotoxy.y
@@ -25,8 +25,8 @@
 02B     lcd_send_byte.n
 02C     lcd_read_byte.low
 02C     lcd_send_byte.@SCRATCH1
-02D     lcd_read_byte.high
 02D     lcd_send_nibble.nibble
+02D     lcd_read_byte.high
 02E.0   lcd_read_nibble.retval_0
 02E     lcd_read_nibble.retval
 02E.1   lcd_read_nibble.retval_1
@@ -46,9 +46,9 @@
 ROM Allocation:
 000004  LCD_INIT_STRING.call
 000008  LCD_INIT_STRING.data
-00000C  @const672.call
-000013  @const677.call
-00001A  @const678.call
+00000C  @const735.call
+000013  @const740.call
+00001A  @const741.call
 000021  @delay_ms1
 000035  lcd_send_nibble
 000061  lcd_read_nibble
@@ -57,26 +57,25 @@ ROM Allocation:
 0000C3  lcd_init
 0000F1  lcd_gotoxy
 000103  lcd_putc
-000127  @PSTRINGC7_660
+000127  @PSTRINGC7_723
 00017D  MAIN
 00017D  @cinit1
 000189  @cinit2
 
 Project Directory:
-    E:\Martin Hdez\Desktop\CCS 16F\877A\Práctica 10\
+    C:\Users\victo\OneDrive\Documentos\X-TRAINER-hands-on\CCS\PIC16F\10-LCD-CCS-PIC16F887-877A\Proyecto\PIC16F877A\
 
 Project Files:
-    LCD.c                                                   [24-feb.-22 14:44  CRC=38FD4317]
-    ..\..\..\..\..\Program Files\PICC\Devices\16F877A.h     [15-ene.-18 15:53  CRC=63418C39]
-    flex_lcd.h                                              [24-feb.-22 14:42  CRC=282E02A0]
+    LCD.c                                                   [29-ago.-23 17:29  CRC=056CBF14]
+    ..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877A.h [02-may.-23 08:27  CRC=32478F9C]
+    flex_lcd.h                                              [24-feb.-22 20:56  CRC=282E02A0]
 
-Source signature=EC9AD490
+Source signature=881053F0
 Program memory checksum=0000
-Program memory CRC=0000
 Hex file CRC=673F
 
 Units:
-    LCD (main)
+    C:\Users\victo\OneDrive\Documentos\X-TRAINER-hands-on\CCS\PIC16F\10-LCD-CCS-PIC16F887-877A\Proyecto\PIC16F877A\LCD (main)
 
 Compiler Settings:
     Processor:      PIC16F877A
@@ -85,7 +84,10 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
-    Compile Mode:       CCS5
+    Compile Mode:   CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
 Output Files:
     XREF file:   LCD.xsym
